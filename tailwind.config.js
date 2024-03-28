@@ -4,17 +4,27 @@ import daisyui from 'daisyui';
 export default {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    fontSize: {
-      xxl: '1.75rem',
-    }
+    // fontSize: {
+    //   xxl: '1.75rem',
+    // },
+
   },
   fontFamily: {
-    poppins: 'poppins',
+    'poppins': 'poppins',
   },
   extend: {
     spacing: {
-      194: '52rem',
+      '194': '52rem',
+      'cardsWidth': '19rem',
+      'cardsHeight': '7.5rem'
     },
+    // rotate: {
+    //   '225': '225deg',
+    // },
+    colors: {
+      'iconNotification': '#3692EB',
+
+    }
   },
   daisyui: {
     themes: false, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]

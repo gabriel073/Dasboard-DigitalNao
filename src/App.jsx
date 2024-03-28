@@ -1,12 +1,10 @@
-import Aside from "./components/Aside"
-import Header from "./components/Header"
-import Main from "./components/Main"
+import Aside from "./components/Aside.jsx";
+import Header from "./components/Header.jsx";
+import Main from "./components/Main.jsx";
 
 
 
 function App() {
-
-
   return (
     <>
       <div className="flex max-h-194">
@@ -16,7 +14,6 @@ function App() {
           <Main />
         </div>
       </div>
-
     </>
   )
 }

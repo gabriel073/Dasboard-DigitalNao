@@ -10,9 +10,8 @@ function Aside() {
         <div className='w-1/5 font-poppins h-screen flex justify-center pt-2 flex-wrap'>
             <ul className="justify-center text-sm mb-10">
                 <li className="flex justify-center pb-4 ">
-                    <a href="#"
-                        className="flex   hover:bg-gray-200 transition-colors py-2 px-4 rounded-lg">
-                        <FaPowerOff className='text-5xl' />
+                    <a href="#" className="flex items-center hover:bg-gray-200 transition-colors py-2 px-4 rounded-lg w-20 h-20 ">
+                        <FaPowerOff className='w-20 h-20 ' />
                     </a>
                 </li>
 
