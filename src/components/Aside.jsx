@@ -7,11 +7,12 @@ import { IoMdSettings } from "react-icons/io";
 
 function Aside() {
     return (
-        <div className='w-1/5 font-poppins h-screen flex justify-center pt-2 flex-wrap'>
-            <ul className="justify-center text-sm mb-10">
+        <div className='w-1/5 font-poppins h-full flex pt-2 justify-center  flex-wrap'>
+
+            <ul className="justify-between text-sm mb-36">
                 <li className="flex justify-center pb-4 ">
                     <a href="#" className="flex items-center hover:bg-gray-200 transition-colors py-2 px-4 rounded-lg w-20 h-20 ">
-                        <FaPowerOff className='w-20 h-20 ' />
+                        <FaPowerOff className='w-20 h-20' />
                     </a>
                 </li>
 
@@ -73,7 +74,7 @@ function Aside() {
 
             </ul>
 
-            <div className="flex flex-wrap justify-center ">
+            <div className="flex flex-wrap justify-center">
                 <h2 className="px-2 mr-4 text-sm mb-5"><strong>Custommer Support</strong></h2>
                 <p className="px-7 mb-5 text-xs text-slate-400">Ask you query , place
                     requests or important
@@ -87,7 +88,7 @@ function Aside() {
                 </button>
                 <p className="text-xs text-slate-400  mr-14">Terms & Services<br /> Privacy Policy</p>
             </div >
-        </div >
+        </div>
     )
 }
 

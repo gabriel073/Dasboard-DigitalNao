@@ -2,14 +2,14 @@
 function Header() {
     return (
         <>
-            <div className="w-full h-20 flex justify-between items-center" >
+            <div className="w-full h-20 flex justify-between items-center bg-[#F8F7FC]" >
                 <div className="flex  " >
                     <div className="flex flex-col ml-3">
                         <h2 className="font-poppins text-base text-black">Total Revenue</h2>
                         <p className="font-poppins  text-black text-xxl"><strong>$ 45,365.00</strong></p>
                     </div>
 
-                    <div className="flex items-end ml-3 mb-2 ">
+                    <div className="flex items-end ml-3 mb-1 ">
                         <svg height="13" fill="red" className="rotate-180 mb-1 " viewBox="0 0 11 11" width="13" xmlns="http://www.w3.org/2000/svg"><path d="m5.5174 1.2315c-.2011-.0062-.3898.0965-.4934.2685l-4 6.6598c-.2227.3695.0439.8401.476.8402h8c.4321-.0001.6987-.4707.476-.8402l-4-6.6598c-.0973-.1614-.27-.2625-.4586-.2685z" /></svg> <p className="mr-3 text-red-900 text-xs">$1,294</p>
 
                         <svg height="13" fill="green" viewBox="0 0 11 11" width="13" className=" mb-1 " xmlns="http://www.w3.org/2000/svg"><path d="m5.5174 1.2315c-.2011-.0062-.3898.0965-.4934.2685l-4 6.6598c-.2227.3695.0439.8401.476.8402h8c.4321-.0001.6987-.4707.476-.8402l-4-6.6598c-.0973-.1614-.27-.2625-.4586-.2685z" /></svg><p className=" text-green-900 text-xs">$1,294</p>

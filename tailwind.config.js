@@ -24,6 +24,7 @@ export default {
     colors: {
       'iconNotification': '#3692EB',
 
+
     }
   },
   daisyui: {

@@ -76,14 +76,15 @@ export default class Graphic extends PureComponent {
     render() {
         return (
             <>
-                <div className="w-[30rem] h-[40rem]  bg-white p-4 mx-4 rounded-xl border border-gray-200 flex  flex-col shadow-xl">
+                <div className="w-full md:w-[30rem] h-full bg-white p-4 mx-4 rounded-xl border border-gray-200 flex flex-col shadow-xl">
+                    {/* <div className="w-[30rem] h-[40rem]  bg-white p-4 mx-4 rounded-xl border border-gray-200 flex  flex-col shadow-xl"> */}
                     <div className=" flex justify-between">
-                        <p className=" flex flex-col ">
+                        <p className=" flex flex-col text-lg">
                             <strong>Today's trends  </strong>
-                            30 sept 2021
+                            <p className=" text-xs"> 30 sept 2021</p>
                         </p>
-                        <div className=" flex flex-row gap-4 items-end">
-                            <div className="w-[8rem]">
+                        <div className=" flex flex-row items-end">
+                            <div className="w-[8rem] text-xs">
                                 <span className="divider divider-end divider-secondary w-[6rem]"> Today </span>
                                 <span className="divider divider-end divider-success "> Yesterday </span>
 
@@ -91,7 +92,7 @@ export default class Graphic extends PureComponent {
                         </div>
                     </div>
 
-                    <div className='w-full  mt-3 flex-1 text-xs'>
+                    <div className='w-full flex-1 text-xs'>
                         <ResponsiveContainer width="100%" height="100%" >
                             <LineChart
                                 width={500}
@@ -116,3 +117,4 @@ export default class Graphic extends PureComponent {
         );
     }
 }
+
