@@ -76,7 +76,7 @@ export default class Graphic extends PureComponent {
     render() {
         return (
             <>
-                <div className="w-full md:w-[30rem] h-full bg-white p-4 mx-4 rounded-xl border border-gray-200 flex flex-col shadow-xl">
+                <div className="w-full md:w-[30rem] h-full bg-white p-4 mx-4 rounded-xl border border-gray-200 flex flex-col shadow-xl dark:text-white dark:bg-[#16193A]">
                     {/* <div className="w-[30rem] h-[40rem]  bg-white p-4 mx-4 rounded-xl border border-gray-200 flex  flex-col shadow-xl"> */}
                     <div className=" flex justify-between">
                         <p className=" flex flex-col text-lg">

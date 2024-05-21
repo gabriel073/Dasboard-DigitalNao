@@ -8,9 +8,9 @@ import CardViewDetails from "./CardViewDetails.jsx";
 
 function Main() {
     return (
-        <div className="w-full h-full pl-4 bg-[#F8F7FC]-z-55">
+        <div className="w-full h-content pl-4 bg-[#F8F7FC]-z-55  dark:bg-[#030C1B] ">
             <div className="flex h-[11rem]">
-                <div className="flex justify-between gap-6 m-4">
+                <div div className="flex justify-between gap-6 m-4" >
 
                     <div className="stats bg-gradient-to-r from-blue-300 via-blue-400 to-blue-700 text-primary-content font-poppins w-80 h-28.5 opacity-80 p-2">
                         <div class="stat">
@@ -22,7 +22,7 @@ function Main() {
                     </div>
 
 
-                    <div className="flex flex-wrap relative transform transition-all skew-x-1 skew-y-1 rotate-180 -z-50" >
+                    <div className="flex flex-wrap relative transform transition-all skew-x-1 skew-y-1 rotate-180 -z-50 dark:z-50" >
                         <div className=" absolute rotate-45" >
                             <FaTruck className="w-24 h-24 absolute rotate-90 translate-x-24 -translate-y-36 -top-20 left-24 opacity-30 pl-5" />
                         </div>
@@ -37,7 +37,7 @@ function Main() {
                         </div>
                     </div>
 
-                    <div className="flex flex-wrap relative transform transition-all skew-x-1 skew-y-1 rotate-180 -z-50" >
+                    <div className="flex flex-wrap relative transform transition-all skew-x-1 skew-y-1 rotate-180 -z-50 dark:z-50" >
                         <div className="absolute rotate-45" >
                             <FaShoppingCart className="w-24 h-24 absolute rotate-90 translate-x-24 -translate-y-36 -top-20 left-20 opacity-30 pl-5" />
                         </div>
@@ -52,16 +52,16 @@ function Main() {
                         </div>
                     </div>
 
-                    <div className="flex flex-wrap relative transform transition-all skew-x-1 skew-y-1 rotate-180 -z-50">
+                    <div className="flex flex-wrap relative transform transition-all skew-x-1 skew-y-1 rotate-180 -z-50 dark:z-50">
                         <div className="absolute rotate-45">
                             <FaBriefcase className=" absolute rotate-90 translate-x-24 -translate-y-36 -top-24 left-24  w-24 h-24 opacity-30 pl-5" />
                         </div>
                     </div>
 
-                </div>
-            </div>
+                </div >
+            </div >
 
-            <div className="grid grid-cols-2 flex-wrap gap-4 p-4  flex-col flex-row">
+            <div className="grid grid-cols-2 flex-wrap gap-4 p-4  flex-col ">
                 {/* Componentes CardViewDetails y CardActivity */}
                 <div className="w-full ">
                     <div className="w-full">
@@ -77,7 +77,7 @@ function Main() {
                     <Graphic />
                 </div>
             </div>
-        </div>
+        </div >
 
 
     )
