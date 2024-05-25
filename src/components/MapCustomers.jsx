@@ -1,5 +1,5 @@
-import { ReactWorldCountriesMap } from "react-world-countries-map"
-
+import { ReactWorldCountriesMap } from "react-world-countries-map";
+// import mockGeoFeactures from "./src/data/mockGeoFeatures.js";
 function MapCustomers() {
 
     const data =
