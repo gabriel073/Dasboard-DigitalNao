@@ -1,5 +1,7 @@
 # Project Digital Nao My Dashboard Documentation
 
+##
+![Screenshot del Dashboard](https://i.ibb.co/CBBvTbQ/dashboard.png)
 
 ## run app in local:
 
@@ -30,5 +32,4 @@ npm start
 ##
 [Link al Dashboard](https://dashboard-digitalnao.netlify.app)
 
-##
-![Screenshot del Dashboard](https://i.ibb.co/CBBvTbQ/dashboard.png)
+
