@@ -29,7 +29,6 @@ function Users() {
     const handleUpdateUser = (user) => {
         setSelectedUser(user);
         setShowUpdateModal(true);
-
     };
 
     const handleDeleteUser = (user) => {
@@ -40,7 +39,6 @@ function Users() {
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
-
     const totalPages = Math.ceil(totalCount / itemsPerPage);
 
     return (
@@ -53,7 +51,6 @@ function Users() {
                     </div>
                 </div>
             </div>
-
             <div className="container mx-auto p-4 border-b pt-20 border-gray-200 items-center justify-center h-full w-full dark:bg-[#030C1B] flex-wrap">
                 {loading ? (
                     <div>Loading...</div>
@@ -130,5 +127,4 @@ function Users() {
         </>
     );
 }
-
 export default Users;

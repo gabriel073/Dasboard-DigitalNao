@@ -29,5 +29,4 @@ function CardViewDetails() {
 
     )
 }
-
-export default CardViewDetails
+export default CardViewDetails;

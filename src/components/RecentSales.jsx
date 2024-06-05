@@ -4,9 +4,7 @@ function RecentSales() {
         <div className='flex flex-col p-4 bg-whitejustify-between  text-black  rounded-xl border border-gray-200 shadow-xl  dark:text-white dark:bg-[#16193A]'>
             <div div className='flex justify-between mb-4'>
                 <h2 className='ml-4 text-lg font-bold text-[18px]'> <strong>Recent Sales</strong></h2>
-
             </div >
-
             <div div className=' flex justify-between -mb-4 font-bold '>
                 <p className='ml-4 text-lg text-black dark:text-white '>#</p>
                 <p className='mr-4 text-sm text-black dark:text-white'>Client</p>
@@ -15,12 +13,9 @@ function RecentSales() {
                 <p className='mr-4 text-sm text-black dark:text-white'>Status</p>
             </div >
             <div className="divider dark:border-solid dark:border-t-2 mt-6 dark:border-[#C5C7CD]"></div>
-
-
             <div className="flex flex-row  font-normal items-center" >
                 <div className="flex w-full justify-start">
                     <p className="text-sm ">#2324</p>
-
                 </div>
                 <div className="flex w-full flex-wrap">
                     <p className="text-sm w-32 flex-wrap ">Esteban Gonzalez</p>
@@ -36,11 +31,9 @@ function RecentSales() {
                 </div>
             </div>
             <div className="divider dark:border-solid dark:border-t-2 dark:border-[#C5C7CD]"></div>
-
             <div className="flex flex-row font-normal items-center" >
                 <div className="flex w-full justify-start">
                     <p className="  text-sm">#0924</p>
-
                 </div>
                 <div className="flex w-full flex-wrap">
                     <p className="text-sm w-32 flex-wrap">Jose Lopez</p>
@@ -56,11 +49,9 @@ function RecentSales() {
                 </div>
             </div>
             <div className="divider dark:border-solid dark:border-t-2 dark:border-[#C5C7CD]"></div>
-
             <div className="flex flex-row font-normal items-center" >
                 <div className="flex w-full justify-start">
                     <p className="  text-sm">#2694</p>
-
                 </div>
                 <div className="flex w-full flex-wrap">
                     <p className="text-sm w-32 flex-wrap">Alejandro Benitez</p>
@@ -76,10 +67,7 @@ function RecentSales() {
                 </div>
             </div>
             <div className="divider dark:border-solid dark:border-t-2 dark:border-[#C5C7CD] -mb-4 "></div>
-
-
         </div >
     )
 }
-
-export default RecentSales
+export default RecentSales;

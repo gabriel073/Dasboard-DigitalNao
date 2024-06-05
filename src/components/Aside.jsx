@@ -22,12 +22,10 @@ function Aside() {
 
     const handleChangeTheme = () => {
         setTheme(prevTheme => prevTheme === "light" ? "dark" : "light");
-
     }
 
     return (
         <div className='w-1/5 h-content pb-30 font-poppins flex pt-2 justify-center flex-wrap dark:text-white dark:bg-[#16193A] dark:hover:bg-[#16193A] '>
-
             <ul className="flex flex-col justify-between text-sm mb-6 gap-4">
                 <li className="flex justify-center pb-4 ">
                     <button onClick={handleChangeTheme} data-testid="toggle-theme" className="flex items-center hover:bg-gray-200 transition-colors py-2 px-4 rounded-lg w-20 h-20 dark:hover:bg-opacity-20">

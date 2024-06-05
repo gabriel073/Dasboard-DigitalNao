@@ -8,10 +8,8 @@ function Shipping() {
             <div className="flex flex-wrap w-full h-fit ">
                 <Header />
                 <h1 className='m-auto flex text-7xl'> View Shipping </h1>
-
             </div>
         </div>
     )
 }
-
-export default Shipping
+export default Shipping;

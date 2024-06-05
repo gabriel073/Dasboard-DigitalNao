@@ -22,9 +22,6 @@ const validationSchema = yup.object({
 function UpdateUserModal({ isOpen, onClose, user }) {
     const dispatch = useDispatch();
 
-
-
-
     const formik = useFormik({
         initialValues: {
             name: user?.name || '',
@@ -34,13 +31,10 @@ function UpdateUserModal({ isOpen, onClose, user }) {
         enableReinitialize: true,
         validationSchema: validationSchema,
         onSubmit: (values) => {
-
             dispatch(updateUser({ id: user.id, ...values }));
             onClose();
         },
     });
-
-
 
     return (
         <Modal isOpen={isOpen} onRequestClose={onClose} className="flex flex-col dark:text-white items-center mt-24 ">
@@ -99,5 +93,4 @@ function UpdateUserModal({ isOpen, onClose, user }) {
         </Modal>
     );
 }
-
 export default UpdateUserModal;

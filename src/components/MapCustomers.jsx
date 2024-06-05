@@ -1,7 +1,6 @@
 import { ReactWorldCountriesMap } from "react-world-countries-map";
-// import mockGeoFeactures from "./src/data/mockGeoFeatures.js";
-function MapCustomers() {
 
+function MapCustomers() {
     const data =
         [
             { country: "us", value: 2267527 },  // Estados Unidos
@@ -24,10 +23,8 @@ function MapCustomers() {
                     tooltipColor="white" tooltipFontSize="0.8rem"
                     tooltipBgColor="blue" tooltipTextColor="white"
                     value-suffix="Customers" size="lg" data={data} />
-
             </ div>
         </div >
     );
 }
-
 export default MapCustomers;

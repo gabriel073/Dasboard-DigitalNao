@@ -1,8 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
 
-
-
 function DeleteUserModal({ isOpen, onClose, onDelete, user }) {
     const handleDelete = () => {
         if (user) {
@@ -25,7 +23,6 @@ function DeleteUserModal({ isOpen, onClose, onDelete, user }) {
                             <div className='flex flex-col gap-2  border-2 border-gray-200 bg-slate-400  dark:bg-[#2a2f6b] dark:hover:bg-[#5b63bf] rounded-xl p-3'>
                                 <button onClick={onClose}>Cancelar</button>
                             </div>
-
                         </div>
                     </div>
                 ) : (

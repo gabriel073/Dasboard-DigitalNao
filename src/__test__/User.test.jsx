@@ -40,7 +40,6 @@ beforeEach(() => {
 
 
 describe('User component', () => {
-
     test('should open form create users', () => {
         <Provider store={store}>
             <CreateUserModal />
@@ -92,7 +91,6 @@ describe('User component', () => {
             </Provider>
         );
 
-        // Simulate click on edit button
         const editButton = document.querySelector('button', { name: 'Edit' });
         fireEvent.click(editButton);
 

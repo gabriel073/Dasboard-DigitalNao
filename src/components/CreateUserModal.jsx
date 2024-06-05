@@ -97,7 +97,6 @@ function CreateUserModal({ isOpen, onClose, onCreate }) {
                         {formik.touched.phone && formik.errors.phone ? (
                             <div className="text-red-500 ">{formik.errors.phone}</div>
                         ) : null}
-
                     </div>
                     <div className="flex flex-col m-auto border border-gray-200 bg-slate-400 p-2 gap-2 text-center  dark:bg-[#2a2f6b] dark:hover:bg-[#5b63bf]  rounded-xl  w-36 ">
                         <button type="submit">Create User</button>
