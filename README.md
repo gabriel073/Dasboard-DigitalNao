@@ -1,5 +1,8 @@
 # Project Digital Nao My Dashboard Documentation
 
+##
+[Link al Dashboard](https://dashboard-digitalnao.netlify.app)
+
 ## run app in local:
 
 ```
