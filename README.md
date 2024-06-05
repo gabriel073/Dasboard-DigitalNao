@@ -10,6 +10,12 @@ npm install
 npm run dev
 ```
 
+## run back in server:
+
+```
+npm run start
+```
+
 ## run app in production:
 
 ```
