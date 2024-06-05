@@ -1,7 +1,5 @@
 # Project Digital Nao My Dashboard Documentation
 
-##
-[Link al Dashboard](https://dashboard-digitalnao.netlify.app)
 
 ## run app in local:
 
@@ -28,3 +26,9 @@ npm start
 ```
  npx cypress open
 ```
+
+##
+[Link al Dashboard](https://dashboard-digitalnao.netlify.app)
+
+##
+![Screenshot del Dashboard](https://ibb.co/b11L8sX)
