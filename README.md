@@ -31,4 +31,4 @@ npm start
 [Link al Dashboard](https://dashboard-digitalnao.netlify.app)
 
 ##
-![Screenshot del Dashboard](https://ibb.co/b11L8sX)
+![Screenshot del Dashboard](https://i.ibb.co/b11L8sX/dashboard.png)
