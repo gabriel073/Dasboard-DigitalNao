@@ -30,7 +30,7 @@ function Aside() {
 
             <ul className="flex flex-col justify-between text-sm mb-6 gap-4">
                 <li className="flex justify-center pb-4 ">
-                    <button onClick={handleChangeTheme} className="flex items-center hover:bg-gray-200 transition-colors py-2 px-4 rounded-lg w-20 h-20 dark:hover:bg-opacity-20">
+                    <button onClick={handleChangeTheme} data-testid="toggle-theme" className="flex items-center hover:bg-gray-200 transition-colors py-2 px-4 rounded-lg w-20 h-20 dark:hover:bg-opacity-20">
                         <FaPowerOff className='w-20 h-20' />
                     </button>
                 </li>

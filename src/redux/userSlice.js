@@ -1,18 +1,20 @@
-// aca va la logica de la aplicacion del Slice
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
+
 // Asynchronous thunk actions
-export const fetchUsers = createAsyncThunk('users/fetchUsers', async ({ page = 1, limit = 9 } = {}) => {
+export const fetchUsers = createAsyncThunk('users/fetchUsers', async ({ page = 1, limit } = {}) => {
+
     const response = await fetch(`http://localhost:4000/users?_page=${page}&_limit=${limit}`);
     if (!response.ok) {
         throw new Error('Network response was not ok');
     }
     const data = await response.json();
     const totalCount = response.headers.get('X-Total-Count'); // Para obtener el total de usuarios
-    console.log('Total Count:', totalCount);
+    // console.log('Total Count:', totalCount);
     return { data, totalCount };
 });
 
+;
 export const addUser = createAsyncThunk('users/addUser', async (newUser) => {
     const response = await fetch("http://localhost:4000/users", {
         method: 'POST',
@@ -47,27 +49,33 @@ export const deleteUser = createAsyncThunk('users/deleteUser', async (userId) =>
 export const userSlice = createSlice({
     name: 'user',
     initialState: {
-        users: [], loading: false, error: null,
+        users: [],
+        loading: false,
+        error: null,
         totalCount: 0
     },
-    reducers: {},
-    // Otras acciones como eliminar usuario, actualizar usuario, etc.
+    reducers: {},   // Otras acciones como eliminar usuario, actualizar usuario, etc.
     extraReducers: (builder) => {
         builder
             .addCase(fetchUsers.pending, (state) => {
                 state.loading = true;
                 state.error = null;
             })
+
             .addCase(fetchUsers.fulfilled, (state, action) => {
                 state.loading = false;
                 state.users = action.payload.data;
-                state.totalCount = action.payload.totalCount;
+                state.totalCount = parseInt(action.payload.totalCount, 10);
             })
             .addCase(fetchUsers.rejected, (state, action) => {
                 state.loading = false;
                 state.error = action.error.message;
             })
+
+
             .addCase(addUser.fulfilled, (state, action) => {
+                state.totalCount += 1;
+                // Add the new user to the state (this can be handled by the component)
                 state.users.push(action.payload);
             })
             .addCase(updateUser.fulfilled, (state, action) => {
@@ -78,9 +86,11 @@ export const userSlice = createSlice({
             })
             .addCase(deleteUser.fulfilled, (state, action) => {
                 state.users = state.users.filter(user => user.id !== action.payload);
+                state.totalCount -= 1;
             });
     }
 
 });
+
 
 export default userSlice.reducer;

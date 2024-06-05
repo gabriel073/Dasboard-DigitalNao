@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchUsers, addUser, updateUser, deleteUser } from '../redux/userSlice';
@@ -31,6 +29,7 @@ function Users() {
     const handleUpdateUser = (user) => {
         setSelectedUser(user);
         setShowUpdateModal(true);
+
     };
 
     const handleDeleteUser = (user) => {
@@ -43,14 +42,14 @@ function Users() {
     };
 
     const totalPages = Math.ceil(totalCount / itemsPerPage);
-    // console.log('Total Pages:', totalPages);
+
     return (
         <>
             <div className="w-full h-full  bg-gray-200 flex-col rounded-xl border border-gray-200 shadow-xl  dark:text-white dark:bg-[#030C1B] flex-wrap justify-items-center ">
                 <div className="w-full flex gap-2 p-2 justify-between items-center ">
-                    <h1 className="ml-5">Lista de Usuarios</h1>
-                    <div className="flex-col border border-gray-200 mr-5 p-2 gap-2 dark:bg-[#2a2f6b] dark:hover:bg-[#5b63bf] rounded-xl h-auto w-32 flex justify-center">
-                        <button onClick={handleCreateUser}>Crear Usuario</button>
+                    <h1 className="ml-5">List of Customers</h1>
+                    <div className="flex-col border border-gray-200 mr-5 p-[3px]  gap-2 dark:bg-[#2a2f6b] dark:hover:bg-[#5b63bf] rounded-xl h-10 w-36 flex justify-center">
+                        <button onClick={handleCreateUser}>Create Customer</button>
                     </div>
                 </div>
             </div>
@@ -59,22 +58,25 @@ function Users() {
                 {loading ? (
                     <div>Loading...</div>
                 ) : (
-                    <div className="dark:text-white border-gray-200 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-center justify-center h-full dark:bg-[#030C1B]">
+                    <div className="user-item  dark:text-white border-gray-200 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-center justify-center h-full dark:bg-[#030C1B]">
                         {Array.isArray(users) && users.map(user => (
                             <div key={user.id} className="h-[29vh] w-full">
-                                <div className="flex flex-col border border-gray-200 p-4 gap-4 dark:bg-[#16193A] rounded-xl w-50">
+                                <div className="flex  flex-col border border-gray-200 p-4 gap-4 dark:bg-[#16193A] rounded-xl w-50">
                                     <div>
-                                        <strong>Nombre:</strong> {user.name}
+                                        <strong>Name:</strong> {user.name}
                                     </div>
                                     <div>
                                         <strong>Email:</strong> {user.email}
                                     </div>
+                                    <div>
+                                        <strong>Phone:</strong> {user.phone}
+                                    </div>
                                     <div className="flex items-center gap-4">
                                         <div className="flex flex-col border dark:bg-[#2a2f6b] dark:hover:bg-[#5b63bf] p-2 gap-2 bg-slate-400 rounded-xl w-20">
-                                            <button onClick={() => handleUpdateUser(user)}>Editar</button>
+                                            <button onClick={() => handleUpdateUser(user)}>Edit</button>
                                         </div>
                                         <div className="flex flex-col border dark:bg-[#2a2f6b] dark:hover:bg-[#5b63bf] p-2 gap-2 bg-slate-400 rounded-xl w-20">
-                                            <button onClick={() => handleDeleteUser(user)}>Eliminar</button>
+                                            <button onClick={() => handleDeleteUser(user)}>Delete</button>
                                         </div>
                                     </div>
                                 </div>
@@ -82,14 +84,12 @@ function Users() {
                         ))}
                     </div>
                 )}
-                <div className="pb-12 pt-2  dark:text-white">
+                <div className="pb-12 pt-2  dark:text-white ">
                     <Pagination
                         totalPages={totalPages}
                         currentPage={currentPage}
                         onPageChange={handlePageChange}
-
                     />
-
                 </div>
             </div>
 
@@ -97,7 +97,15 @@ function Users() {
                 isOpen={showCreateModal}
                 onClose={() => setShowCreateModal(false)}
                 onCreate={(newUser) => {
-                    dispatch(addUser(newUser));
+                    dispatch(addUser(newUser)).then(() => {
+                        // Calcular el nuevo número de usuarios y actualizar totalPages y currentPage si es necesario
+                        const newTotalCount = totalCount + 1;
+                        const newTotalPages = Math.ceil(newTotalCount / itemsPerPage);
+                        if (newTotalPages > totalPages) {
+                            setCurrentPage(newTotalPages);
+                        }
+                        dispatch(fetchUsers({ page: newTotalPages, limit: itemsPerPage }));
+                    });
                     setShowCreateModal(false);
                 }}
             />

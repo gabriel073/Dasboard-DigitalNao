@@ -18,7 +18,7 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => {
             <button
                 onClick={handlePrevPage}
                 disabled={currentPage === 1}
-                className="mx-1 px-3 py-1 border rounded disabled:opacity-50"
+                className="mx-1 px-3 py-1 border rounded disabled:opacity-50  dark:bg-[#2a2f6b] dark:hover:bg-[#5b63bf]"
             >
                 Anterior
             </button>
@@ -26,7 +26,7 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => {
                 <button
                     key={index + 1}
                     onClick={() => onPageChange(index + 1)}
-                    className={`mx-1 px-3 py-1 border hover:bg-[#5b63bf]  bg-slate-400 rounded-xl ${currentPage === index + 1 ? 'bg-blue-500 text-white' : ''}`}
+                    className={`mx-1 px-3 py-1 border  dark:bg-[#2a2f6b] dark:hover:bg-[#5b63bf] hover:bg-[#5b63bf]  bg-slate-400 rounded-xl ${currentPage === index + 1 ? 'bg-blue-500 text-white' : ''}`}
                 >
                     {index + 1}
                 </button>
@@ -34,7 +34,7 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => {
             <button
                 onClick={handleNextPage}
                 disabled={currentPage === totalPages}
-                className="mx-1 px-3 py-1 border hover:bg-[#5b63bf] disabled:opacity-50  bg-slate-400 rounded-xl"
+                className="mx-1 px-3 py-1 border  dark:bg-[#2a2f6b] dark:hover:bg-[#5b63bf] hover:bg-[#5b63bf] disabled:opacity-50  bg-slate-400 rounded-xl"
             >
                 Siguiente
             </button>
